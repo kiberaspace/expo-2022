@@ -1,0 +1,33 @@
+body>footer ul,body>footer ul li {
+    margin-bottom: 0;
+    padding: 0;
+    color: var(--muted-color);
+    list-style: none
+}
+
+body>footer li {
+    display: inline-block
+}
+
+body>footer li:not(:first-child)::before {
+    margin: 0 .25rem;
+    content: "·"
+}
+
+body>footer ul:first-of-type {
+    margin-bottom: calc(var(--spacing) * .5)
+}
+
+body>footer ul:first-of-type a {
+    text-decoration: none
+}
+
+@media (max-width: 767px) {
+    body>footer ul:last-of-type li {
+        display:list-item
+    }
+
+    body>footer ul:last-of-type li::before {
+        display: none
+    }
+}
