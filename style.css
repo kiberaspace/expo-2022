@@ -31,3 +31,24 @@ body>footer ul:first-of-type a {
         display: none
     }
 }
+
+#spotlight {
+    display: flex;
+    flex-direction: column;
+}
+
+#spotlight img {
+    max-inline-size: 100%;
+    block-size: auto; /* Preserve aspect ratio */
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: top center;
+    align-self: center;
+}
+
+@media (max-width: 767px) {
+    #spotlight img {
+        aspect-ratio: 1/1;
+        object-position: top center;
+    }
+}
